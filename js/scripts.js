@@ -1,7 +1,14 @@
+//var fullName = function(fnameInput, lnameInput){
+  //return fnameInput + " " + lnameInput
+//}
+
+
+//front end starts here
 $(document).ready(function() {
   $("#addressbook").submit(function(event) {
     var fnameInput = $("input#fname").val();
     var lnameInput = $("input#lname").val();
+    var fullname = fnameInput + " " + lnameInput;
     var streetaddrInput = $("input#street-addr").val();
     var cityInput = $("input#city").val();
     var stateSelect = $("select#state").val();
@@ -14,6 +21,7 @@ $(document).ready(function() {
     $(".city").text(cityInput);
     $(".state").text(stateSelect);
     $(".zip").text(zipInput);
+    $(".fullname").text(fullname);
 
 
     $("#contact-card").show();
